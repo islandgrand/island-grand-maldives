@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms - Island Grand Maldives</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Island Grand Maldives">
+            </div>
+            <nav>
+                <ul>
+                   <li><a href="index.html">Home</a></li>
+                    <li><a href="rooms.html">Rooms</a></li>
+                    <li><a href="excursions.html">Excursions</a></li>
+                    <li><a href="coming-soon.html">Packages</a></li>
+                    <li><a href="coming-soon.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Our Luxurious Rooms</h1>
+        <p>Indulge in comfort and elegance with stunning ocean views.</p>
+    </section>
+
+    <section class="rooms">
+        <div class="room-container">
+            <div class="room">
+                <img src="room1.jpg" alt="Luxury Suite">
+                <h3>Deluxe Beachfront Suite</h3>
+            </div>
+            <div class="room">
+                <img src="room2.jpg" alt="Water Villa">
+                <h3>Exclusive Overwater Villa</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-form">
+        <h2>Book Your Stay</h2>
+        <form action="https://formspree.io/f/your_form_id" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="room-type">Room Type</label>
+            <select id="room-type" name="room-type" required>
+                <option value="Deluxe Beachfront Suite">Deluxe Beachfront Suite</option>
+                <option value="Exclusive Overwater Villa">Exclusive Overwater Villa</option>
+            </select>
+
+            <label for="check-in">Check-in Date</label>
+            <input type="date" id="check-in" name="check-in" required>
+
+            <label for="check-out">Check-out Date</label>
+            <input type="date" id="check-out" name="check-out" required>
+
+            <label for="message">Additional Requests</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Submit Booking</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <p>Contact: <a href="mailto:islandgrandmaldives@gmail.com">islandgrandmaldives@gmail.com</a></p>
+            <p>WhatsApp: <a href="https://wa.me/9609728781">+960 9728781</a></p>
+            <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

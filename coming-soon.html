@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Island Grand Maldives</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header (Same as Other Pages) -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Island Grand Maldives">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rooms.html">Rooms</a></li>
+                    <li><a href="excursions.html">Excursions</a></li>
+                    <li><a href="coming-soon.html">Packages</a></li>
+                    <li><a href="coming-soon.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Coming Soon Section -->
+    <section class="coming-soon-section">
+        <h1>Something Exciting is Coming Soon!</h1>
+        <p>We are working on this page to bring you the best experience. Stay tuned!</p>
+        <div class="countdown-timer">
+            <p>Launching in:</p>
+            <span id="countdown"></span>
+        </div>
+        <a href="index.html" class="btn">Back to Home</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>Contact: <a href="mailto:islandgrandmaldives@gmail.com">islandgrandmaldives@gmail.com</a></p>
+            <p>WhatsApp: <a href="https://wa.me/9609728781">+960 9728781</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer (Set Launch Date Here)
+        const launchDate = new Date("March 1, 2025 00:00:00").getTime();
+
+        const timer = setInterval(function () {
+            const now = new Date().getTime();
+            const timeLeft = launchDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (timeLeft < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "We're Live Now!";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
